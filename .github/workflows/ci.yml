@@ -13,7 +13,7 @@ jobs:
         uses: actions/setup-node2v1
         with:
           node-version: "12.x"
-      - run: npm CI
+      - run: npm ci
       - run: npm format:check
       - run: npm test -- --coverage
         env: 
