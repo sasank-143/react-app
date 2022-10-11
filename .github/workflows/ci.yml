@@ -9,12 +9,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: use nodejs
-        uses: actions/setup-node2v1
+      - name: Use NodeJS
+        uses: actions/setup-node@v1
         with:
           node-version: "12.x"
       - run: npm ci
-      - run: npm format:check
+      - run: npm run format:check
       - run: npm test -- --coverage
         env: 
           CI: true
